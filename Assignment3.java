@@ -287,4 +287,178 @@ class Money{
     }
 }
 
+//14. Write a java program to input angles of a triangle and check whether triangle is valid or not.
+class angleoftriangle{
+    public static void main(String[] args) {
+        Scanner myobj = new Scanner(System.in);
+        System.out.println("Enter first angle");
+        int angl1 = myobj.nextInt();
+        System.out.println("Enter second angle");
+        int angle2= myobj.nextInt();
+        System.out.println("Enter third angle");
+        int angle3= myobj.nextInt();
+        int total=angl1+angle2+angle3;
+        if (total==180){
+            System.out.println("it is valid triangle");
+        }
+        else
+            System.out.println("it is not valid traingle");
+    }
+}
+
+//15. Write a JAVA program to input all sides of a triangle and check whether triangle is valid or not.
+class sideoftriangle{
+    public static void main(String[] args) {
+        Scanner myobj = new Scanner(System.in);
+        System.out.println("Enter first side");
+        int a = myobj.nextInt();
+        System.out.println("Enter second side");
+        int b = myobj.nextInt();
+        System.out.println("Enter third side");
+        int c = myobj.nextInt();
+        if(a<b+c && b<a+c && c<a+b){
+            System.out.println("It can form traingle");
+        }
+        else{
+            System.out.println("It cannot form traingle");
+        }
+
+    }
+}
+
+
+//16. Write a JAVA program to check whether the triangle is equilateral, isosceles or scalene triangle.
+class traingle{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int a,b,c;
+        System.out.println("Enter 3 sides:");
+        a=sc.nextInt();
+        b=sc.nextInt();
+        c=sc.nextInt();
+        if(a<b+c && b<a+c && c<a+b)
+        {
+            if(a==b && b==c)
+                System.out.println("Equilateral triangle");
+            else if(a==b || b==c || c==a)
+                System.out.println("Isosceles triangle");
+            else
+                System.out.println("Scalene triangle");
+        }
+        else
+            System.out.println("Cannot form a triangle");
+    }
+}
+
+
+//17. Write a JAVA program to find all roots of a quadratic equation.
+class quadratic{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the value of a: ");
+        double a = input.nextDouble();
+        System.out.print("Enter the value of b: ");
+        double b = input.nextDouble();
+        System.out.print("Enter the value of c: ");
+        double c = input.nextDouble();
+        double d= b * b - 4.0 * a * c;
+        if (d> 0.0)
+        {
+            double r1 = (-b + Math.pow(d, 0.5)) / (2.0 * a);
+            double r2 = (-b - Math.pow(d, 0.5)) / (2.0 * a);
+            System.out.println("The roots are " + r1 + " and " + r2);
+        }
+        else if (d == 0.0)
+        {
+            double r1 = -b / (2.0 * a);
+            System.out.println("The root is " + r1);
+        }
+        else
+        {
+            System.out.println("Roots are not real.");
+        }
+    }
+}
+
+
+//18. Write a JAVA program to calculate profit or loss.
+class profitlostt{
+    public static void main(String[] args) {
+        Scanner myobj = new Scanner(System.in);
+        System.out.println("Enter Selling price");
+        float sell = myobj.nextFloat();
+        System.out.println("Enter Cost price");
+        float cost = myobj.nextFloat();
+        float profit;
+        float loss;
+        if(cost-sell>0){
+            System.out.println("lose:"+(cost-sell));
+        }
+        else if(cost-sell<0) {
+            System.out.println("profit:"+(sell-cost));
+
+        }
+        else{
+            System.out.println("neutral");
+        }
+
+    }
+}
+
+
+//19. Write a JAVA program to input marks of five subjects Physics, Chemistry, Biology,
+//Mathematics and Computer. Calculate percentage and grade according to following:
+//Percentage >= 90% : Grade A
+//Percentage >= 80% : Grade B
+//Percentage >= 70% : Grade C
+//Percentage >= 60% : Grade D
+//Percentage >= 40% : Grade E
+//Percentage < 40% : Grade F
+class studentmark{
+    public static void main(String[] args) {
+        Scanner myobj = new Scanner(System.in);
+        System.out.println("Enter Your Physics Mark:");
+        int phy = myobj.nextInt();
+        System.out.println("Enter Your Chemistry Mark:");
+        int chem = myobj.nextInt();
+        System.out.println("Enter Your Biology Mark:");
+        int bio = myobj.nextInt();
+        System.out.println("Enter Your Mathematics Mark:");
+        int math = myobj.nextInt();
+        System.out.println("Enter Your Computer Mark:");
+        int comp = myobj.nextInt();
+        float total, Percentage;
+        total = phy + chem + bio + comp + math;
+        Percentage = (total / 500) * 100;
+        System.out.println("Your total percentage is:"+Percentage);
+        if(Percentage >= 90)
+        {
+            System.out.println("\n Grade A");
+        }
+        else if(Percentage >= 80)
+        {
+            System.out.println("\n Grade B");
+        }
+        else if(Percentage >= 70)
+        {
+            System.out.println("\n Grade C");
+        }
+        else if(Percentage >= 60)
+        {
+            System.out.println("\n Grade D");
+        }
+        else if(Percentage >= 40)
+        {
+            System.out.println("\n Grade E");
+        }
+        else
+        {
+            System.out.println("\n Fail");
+        }
+
+    }
+}
+
+
+
 
